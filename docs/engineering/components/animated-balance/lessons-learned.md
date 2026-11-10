@@ -1,0 +1,9 @@
+# AnimatedBalance lessons learned
+
+Node's Intl capabilities do not establish Hermes compatibility. The native missing-formatToParts failure required a checked pattern tokenizer rather than a package/version upgrade. Integer-only formatting plus explicit fractional substitution keeps precision independent from visual progress. Validate the formatter's glyph template before trusting it.
+
+An accessible label can be correct while native rolling glyphs are invisible. Strip height must be explicit inside a clipped viewport; native visual inspection caught what semantic/controller tests did not. Keep before-fix evidence and add a regression without pretending the regression proves native rendering.
+
+Separate complete authoritative accessibility text from visual digit rows, and leave notification cadence to the application. Decimal-place identity handles carries consistently. Static native Text is a deliberate shaping fallback for non-Latin/bidi formats, not a claim of animated locale coverage. Native retesting confirmed the fixes on both platforms. A 200% Android font can require horizontal scrolling even for an ordinary balance; preserving a complete accessible label and scrollable content is preferable to silently truncating precision. Logical-end alignment follows RTL context while the amount retains numeral order. Native evidence must distinguish semantic completeness from visible viewport completeness.
+
+Normalize width and motion/font/orientation settings explicitly before profiling. Filenames and earlier button state are insufficient evidence. Resolve fresh native bounds after layout changes, and restore settings in a finally block. Window-level gfxinfo counters identify missed deadlines but do not establish component FPS, input latency or render counts. Keep screen-reader, custom-font, physical-device and maximum-column profiling gaps in the cumulative release matrix rather than treating automated tests as their replacement.

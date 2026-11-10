@@ -1,0 +1,21 @@
+# HoldToConfirm implementation journal
+
+Recorded 2026-11-09. Development time not measured.
+
+Reviewed all four repository instructions, installed React Native and UI/UX skills, existing four components, SwipeToPay's controlled async contract, previous profiling evidence, journal templates and cumulative release policy. UI skill search returned all-platform confirmation feedback guidance, used for explicit textual results; no web implementation or new design system was introduced.
+
+Implemented a flat native component with RNGH 3.4 useLongPressGesture, native minDuration authority, 12-point tolerance/outside cancellation, a transform-only Reanimated progress estimate without a completion callback, native/UI and RN latches, generation invalidation and independent controlled operation type. ResetKey and return-to-idle rearm; no Promise or operation ownership. Reduced-motion live preference uses quarter-step progress without shortening physical duration. One native accessible button and guarded activate/tap alternative; discrete announcements. Haptics deferred except consumer onConfirm integration.
+
+Added semantic/controller regressions and public-package showcase integration. Test setup initially missed GestureHandlerRootView in the isolated demo test and restored RN preset listener mocks without a subscription return. Corrected test harness, not production native APIs. Queued-callback spies must be installed before mounting the gesture hook, which retains configured callbacks. Added a synchronous interruption ref to prevent RN accessibility acceptance between Android blur and its React update.
+
+Native iOS execution failed on AppState focus-change subscription: the iOS module supports only AppState change/memory warning events. Limited focus/blur listeners to Android, retained cross-platform change listener and added an explicit iOS subscription regression. Native retest launched correctly. An initial simulator launch also used an incorrect assumed bundle identifier; read the built Info.plist and used com.microinteractions.showcase. This was a validation-command error, not a project configuration defect.
+
+Android Release actual injected holds passed early release, completion/duplicate blocking, slight movement, excessive movement, rapid short presses, delayed disable/duration change and background cancellation. Its first remaining-script assertion expected success after selecting error; actual hidden result correctly remained error. Corrected test expectation/setup and continued from observed state, confirming both hidden error and successful operation/remount. No component defect follows from that script mismatch.
+
+On iOS, coordinate mouse holds translated into actual native long-press recognition: 600 ms released without confirmation; 1700 ms confirmed once and displayed processing. Repeated hold remained locked. Error/reset/retry, delayed disable/duration change, and three rapid 180-ms presses were exercised. A separate exposed native accessibility action immediately confirmed through the same guard. Unmount during processing was observed using accessible activation, followed by success/remount. This is distinct from full VoiceOver or manual-human touch testing. Authentic hold recording retained for visual review.
+
+Final automated, native and profiling outcomes are listed in validation.md and performance-report.md. Prior component source hashes are preserved in evidence/source-baseline.json. No dependency versions, unrelated native configurations, commits, remotes, publishing or deployment.
+
+## Iteration 7 release hardening — 2026-11-10
+
+Reviewed public API, current regressions, exact peer compatibility, package consumption and accessibility/performance limits. Guided physical Android 13 / Xiaomi 2201117SL and iPhone 16 Pro Max / iOS 27 indicated touch scenarios passed by explicit owner confirmation; chosen larger-text/reduced-motion checks passed and preferences were restored. TalkBack/VoiceOver were deferred by owner and remain Not Tested; no blanket release pass. The specific component cases, defects/fixes, native build identities and carried gates are in [release audit](../../releases/0.1.0-beta.1/release-audit.md) and [physical results](../../releases/0.1.0-beta.1/physical-device-results.md). Existing historical records remain valid within their original scope.

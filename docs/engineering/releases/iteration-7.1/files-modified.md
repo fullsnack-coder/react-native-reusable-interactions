@@ -1,0 +1,134 @@
+# Exact file inventory — Iteration 7.1
+
+Compared workspace file hashes captured before this iteration, including originally untracked files. Git diff alone cannot report these foundation changes because they were already untracked. Lists source/config/docs/locks/media and the deliberate local candidate archive; dependency directories, generated build outputs and cache files are excluded. The generated next-env.d.ts change is retained explicitly. VitePress config and ignored native archive are included explicitly. No staging/commit was performed.
+
+## Source deliverables
+
+- Modified: `microinteractions-docs/AGENTS.md`
+- Modified: `microinteractions-docs/README.md`
+- Modified: `microinteractions-docs/docs/.vitepress/config.ts`
+- Modified: `microinteractions-docs/docs/index.md`
+- Modified: `microinteractions-docs/docs/reference/accessibility.md`
+- Modified: `microinteractions-docs/docs/reference/animated-balance.md`
+- Modified: `microinteractions-docs/docs/reference/card-stack-selector.md`
+- Modified: `microinteractions-docs/docs/reference/expandable-transaction-card.md`
+- Modified: `microinteractions-docs/docs/reference/hold-to-confirm.md`
+- Modified: `microinteractions-docs/docs/reference/interactive-purchase-sheet.md`
+- Modified: `microinteractions-docs/docs/reference/platform-compatibility.md`
+- Modified: `microinteractions-docs/docs/reference/swipe-to-pay.md`
+- Modified: `microinteractions-docs/docs/release.md`
+- Added: `microinteractions-docs/docs/security-tooling.md`
+- Modified: `microinteractions-docs/package-lock.json`
+- Modified: `microinteractions-docs/package.json`
+- Modified: `microinteractions-docs/tests/config.test.mjs`
+- Modified: `microinteractions-native/AGENTS.md`
+- Modified: `microinteractions-native/README.md`
+- Modified (ignored local artifact): `microinteractions-native/artifacts/manueldev25-react-native-reusable-interactions-0.1.0-beta.1.tgz`
+- Modified: `microinteractions-native/docs/engineering/README.md`
+- Added: `microinteractions-native/docs/engineering/decisions/0010-beta-reader-validation-deferral.md`
+- Modified: `microinteractions-native/docs/engineering/release-validation-matrix.md`
+- Modified: `microinteractions-native/docs/engineering/releases/0.1.0-beta.1/final-report.md`
+- Modified: `microinteractions-native/docs/engineering/releases/0.1.0-beta.1/known-issues.md`
+- Modified: `microinteractions-native/docs/engineering/releases/0.1.0-beta.1/release-audit.md`
+- Modified: `microinteractions-native/docs/engineering/releases/0.1.0-beta.1/release-checklist.md`
+- Modified: `microinteractions-native/docs/engineering/releases/0.1.0-beta.1/security-audit.md`
+- Modified: `microinteractions-native/docs/release/compatibility.md`
+- Modified: `microinteractions-native/docs/release/known-issues.md`
+- Modified: `microinteractions-native/docs/release/notes.md`
+- Modified: `microinteractions-native/docs/release/publishing.md`
+- Modified: `microinteractions-native/example/package-lock.json`
+- Modified: `microinteractions-showcase/AGENTS.md`
+- Modified: `microinteractions-showcase/package-lock.json`
+- Modified: `microinteractions-showcase/vendor/manueldev25-react-native-reusable-interactions-0.1.0-beta.1.tgz`
+- Added: `microinteractions-web/.prettierignore`
+- Modified: `microinteractions-web/AGENTS.md`
+- Modified: `microinteractions-web/README.md`
+- Added: `microinteractions-web/docs/communications/0.1.0-beta.1/assets-and-review.es.md`
+- Added: `microinteractions-web/docs/communications/0.1.0-beta.1/linkedin-article.es.md`
+- Added: `microinteractions-web/docs/communications/0.1.0-beta.1/linkedin-feed.es.md`
+- Added: `microinteractions-web/docs/media-inventory.json`
+- Added: `microinteractions-web/docs/media-recording-checklist.md`
+- Modified: `microinteractions-web/next-env.d.ts`
+- Added: `microinteractions-web/public/license.txt`
+- Added: `microinteractions-web/public/media/android-confirmation.jpg`
+- Added: `microinteractions-web/public/media/balance-poster.jpg`
+- Added: `microinteractions-web/public/media/balance.mp4`
+- Added: `microinteractions-web/public/media/hold-poster.jpg`
+- Added: `microinteractions-web/public/media/hold.mp4`
+- Added: `microinteractions-web/public/media/sheet.jpg`
+- Added: `microinteractions-web/scripts/verify-native-contract.mjs`
+- Added: `microinteractions-web/src/app/contributing/page.tsx`
+- Added: `microinteractions-web/src/app/documentation/[slug]/page.tsx`
+- Added: `microinteractions-web/src/app/documentation/page.tsx`
+- Added: `microinteractions-web/src/app/engineering/page.tsx`
+- Removed: `microinteractions-web/src/app/favicon.ico`
+- Modified: `microinteractions-web/src/app/globals.css`
+- Added: `microinteractions-web/src/app/icon.svg`
+- Modified: `microinteractions-web/src/app/layout.tsx`
+- Added: `microinteractions-web/src/app/not-found.tsx`
+- Added: `microinteractions-web/src/app/opengraph-image.tsx`
+- Modified: `microinteractions-web/src/app/page.tsx`
+- Added: `microinteractions-web/src/components/copy-command.tsx`
+- Added: `microinteractions-web/src/components/footer.tsx`
+- Added: `microinteractions-web/src/components/media.tsx`
+- Added: `microinteractions-web/src/components/navigation.tsx`
+- Added: `microinteractions-web/src/lib/project.ts`
+- Modified: `microinteractions-web/tests/landing.test.mjs`
+
+## Engineering records and evidence created in this iteration
+
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/artifact-final-verification.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/baseline.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/browser-checks.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/contrast-pairs.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/docs-dependency-versions.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/docs-production-search.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/final-checks.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-docs-audit-after.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-docs-checks.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-docs-ci.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-docs-full-audit-final.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-example-checks.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-media-export.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-docs-audit-before.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-docs-production-audit.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-docs-production-final.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-native-audit-before.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-native-production-audit.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-native-production-final.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-showcase-audit-before.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-showcase-production-audit.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-showcase-production-final.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-web-audit-before.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-web-production-audit.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-microinteractions-web-production-final.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-native-checks.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-native-examples-final.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-pack-check.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-package-verify.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-showcase-checks.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-web-checks.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/iteration71-web-format-final.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/journal-link-validation.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-1440.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-320.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-390.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-768.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-desktop.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-final-1440.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-final-320.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-final-390.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-final-768.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-gallery.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-native-contract.tsx.txt`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/landing-phone.png`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/native-example-typecheck.log`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/pack-manifest.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/package-docs-only-comparison.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/evidence/source-files-modified.json`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/final-report.md`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/implementation-journal.md`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/security-review.md`
+- Added: `microinteractions-native/docs/engineering/releases/iteration-7.1/files-modified.md` (this inventory).
+
+Disposable external validation only: `/private/tmp/rnri-beta-consumer/LandingContract.tsx`, and that consumer’s dependency lock/install refreshed to the reviewed archive. It remains outside all four repositories and is not required for their builds.

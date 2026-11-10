@@ -1,0 +1,9 @@
+# CI review
+
+All four independent workflows pin official checkout v4.3.1 to 34e114876b0b11c390a56381ad16ebd13914f8d5 and setup-node v4.4.0 to 49933ea5288caeca8642d1e84afbd3f7d6820020, resolved from official Git tag refs. Set contents:read, disable persisted checkout credentials, use Node 24.21.0/npm lock cache, 15-minute timeout and push/pull_request only. No secrets, automatic publish/release/deploy, elevated PR event or expensive native hosted job.
+
+Library adds format, actual packed export/content validation and pack dry-run after tests/build. Package verification uses a disposable temporary archive/extraction, validates version/name/tag/access/entries/types/exports/content and deletes only its own temp files. Showcase adds format and vendored-artifact/lock/installed-runtime verification; it no longer needs a sibling repository to npm ci. Docs runs types/Markdown lint/tests/production build. Landing runs types/lint/format/build then built-HTML test (order matters).
+
+The vendored unpublished JS artifact is intentional and lock-integrity-pinned, not an untracked external source workspace. Refreshing it requires an explicit npm install artifact argument; no-argument npm install retained a stale same-version installed package during actual hardening and was corrected. CI verifies this failure mode. Native integration is exercised locally in disposable consumer and physical devices; hosted runners would require a separate supported strategy before adding costly native jobs.
+
+**Hosted GitHub Actions: Not Executed**; there are no remote repositories. YAML/static inspection and locally executed commands do not equal hosted CI success. No remote/tag/commit created. GitHub advises immutable action refs/least privilege; [official guidance](https://docs.github.com/en/actions/reference/security/secure-use).

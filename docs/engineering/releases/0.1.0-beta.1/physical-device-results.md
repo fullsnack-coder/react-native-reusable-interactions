@@ -1,0 +1,42 @@
+# Guided physical-device results
+
+Recorded 2026-11-10. Results are scoped observations, not blanket production validation.
+
+## Android physical — partial gate
+
+Xiaomi 2201117SL, Android 13/SDK 33, arm64-v8a. ADB device authorization, test Release install and foreground were tool-confirmed. Owner confirmed the catalog opens and all six demos are reachable. Exact initial/corrected APK identities are in evidence/android-physical-initial.json and android-arrow-build.json. No serial/personal identifiers retained in this report. Release embeds JS; Metro was not required.
+
+| Check                                                                                    | Result / observer                                                                                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Disclosure expand/collapse and rapid interruption                                        | Passed, owner-confirmed physical touch.                                                                                                                                                                                                |
+| Stack expand/select/reorder/remove selected                                              | Passed, owner-confirmed.                                                                                                                                                                                                               |
+| Swipe partial/full/cancel/duplicate gating, processing/error                             | Passed, owner-confirmed.                                                                                                                                                                                                               |
+| Hold early/full/movement/repeated/background interruption                                | Passed, owner-confirmed.                                                                                                                                                                                                               |
+| Balance increase/decrease/decimals/carry/large/rapid                                     | Passed, owner-confirmed; this is not a precision benchmark.                                                                                                                                                                            |
+| Sheet real handle snaps/body scroll/standard keyboard/insets/backdrop/Back               | Passed, owner-confirmed.                                                                                                                                                                                                               |
+| Swipe arrow vertical alignment                                                           | Failed on initial candidate; screenshot confirmed glyph low. Fixed with native decorative geometry. Corrected Release reinstalled; owner confirmed centered and partial/full drag pass. Before/after retained.                         |
+| Reduced-motion and larger-text functional checks                                         | Passed, owner-confirmed for both preferences and restoration. Exact selected scaling tier not recorded; largest accessibility tier not claimed.                                                                                        |
+| TalkBack                                                                                 | Not Tested. Package presence confirmed, safe activation/exit guidance supplied, Accessibility settings opened without enabling service. Owner explicitly chose to continue without activation. No spoken semantics/focus pass claimed. |
+| Dynamic injected detail content, native RTL, physical multitouch, exhaustive orientation | Not Tested this physical session; prior simulator evidence remains separately scoped.                                                                                                                                                  |
+
+No settings were changed by the agent beyond installing/relaunching the authorized test app and opening the requested Accessibility page; owner performed/restored their motion/text choices. The agent did not enable TalkBack, modify authorizations globally, wipe/reset/uninstall unrelated data or collect general phone logs.
+
+## iPhone physical — partial gate
+
+Owner connected/unlocked/trusted iPhone 16 Pro Max / iOS 27 by USB, then explicitly selected the Development Team in Xcode and confirmed signing without errors. Initial remembered network entry/DDI absence was resolved after wired pairing/readiness; read-only DDI query reported usable and Xcode listed the actual device destination. No unsupported-OS failure is inferred from Xcode 26.2 vs iOS 27. Owner-selected DEVELOPMENT_TEAM is the only required native signing change; preserved, no agent-created credentials/account resources. Signed standalone Release compiled, devicectl install/launch succeeded; owner confirmed six-demo catalog.
+
+| Check                                                                                              | Result / observer                                                                                                                 |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Disclosure expand/collapse/rapid interruptions; stack expand/select/reorder/remove                 | Passed, owner-confirmed physical interaction.                                                                                     |
+| Swipe partial/full/reversed/rapid real pans, processing/error/reset/duplicates                     | Passed, owner-confirmed; these are actual finger drags, closing that specific historical iOS pan gap.                             |
+| Hold early/full/movement/repeated/background cancellation                                          | Passed, owner-confirmed physical interaction.                                                                                     |
+| Balance increase/decrease/carry/large/rapid                                                        | Passed, owner-confirmed.                                                                                                          |
+| Sheet real handle snaps/reversal, body scroll/top no-handoff, standard input/keyboard/insets/close | Passed, owner-confirmed; specific lower-snap keyboard-restore, native multitouch and every cancellation path remain unexecuted.   |
+| Reduce Motion/larger-text functional checks                                                        | Passed, owner-confirmed and original preferences restored; exact tier/timing not recorded.                                        |
+| VoiceOver                                                                                          | Not Tested; activation/navigation/exit guidance supplied, owner explicitly deferred. No spoken focus/restore/result pass claimed. |
+
+No TestFlight/App Store upload, account/token modification or publication. Local Release embeds JS; no Metro route was needed for this physical runtime. The guide still documents Debug Metro/USB/network prerequisites, Personal Team limits, signing/installation/log troubleshooting and reader procedures.
+
+## Gate classification
+
+Implementation Complete is independent of Physical Device Validated and Release Ready. Android physical touch and owner-selected motion/text scenarios passed within scope; full physical gate remains partial because critical TalkBack checks are unexecuted. Both physical touch/motion/text sessions passed within scope; VoiceOver remains pending. Critical missing native/accessibility evidence is not silently relabeled a beta limitation; publication remains blocked pending completion/mitigation and owner governance.
